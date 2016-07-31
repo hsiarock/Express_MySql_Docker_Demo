@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+
+  For query:
+
+  table(border='1')
+    thead
+        tr
+            th #
+            th id
+            th address
+            th borough
+            th cuisine
+            th grades
+            th name
+            th restaurant_id
+    tbody
+        each item, i in items
+            tr
+                td= i+1
+                td= item.id
+                td= item.address
+                td= item.borough
+                td= item.cuisine
+                td= item.grades
+                td= item.name
+                td= item.restaurant_id

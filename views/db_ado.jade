@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Name is #{name}, location is #{location}
+
+  form(action="/db_ado/quotes" method="POST")
+     input(type="text",placeholder="name",  name="name")
+     input(type="text",placeholder="quote", name="quote")
+     button(type="submit", value="Query") Query
